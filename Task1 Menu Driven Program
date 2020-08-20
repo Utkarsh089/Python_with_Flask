@@ -1,0 +1,83 @@
+import os
+import pyttsx3
+engine = pyttsx3.init()                     
+engine.setProperty('rate', 175)     
+
+print("Welcome, I am your virtual assistant. Type your query to chat with me.")
+pyttsx3.speak("Welcome, I am your virtual assistant. Type your query to chat with me.")
+
+while True:
+    x=input("Type your query: ")
+    x=x.lower()
+    
+    if (("don't " in x) or ("not " in x)):
+        print("Ok  So, what can I do for you.")
+        pyttsx3.speak("Ok  So, what can I do for you.")
+        
+    elif (("start" in x) or ("open" in x) or ("launch" in x) or ("run" in x)):
+        if ("chrome" in x or "internet browser" in x):
+            pyttsx3.speak("Opening chrome.")
+            os.system("chrome")
+            
+        elif ("notepad" in x):
+            pyttsx3.speak("Opening notepad.")
+            os.system("notepad")
+            
+        elif ("calculator" in x):
+            pyttsx3.speak("Opening ")
+            os.system("start calculator:")
+            
+        elif ("explorer" in x or "file explorer" in x):
+            pyttsx3.speak("Opening file explorer.")
+            os.system("explorer")
+            
+        elif (("clock" in x) or ("alarm" in x)):
+            pyttsx3.speak("Opening clock.")
+            os.system("start ms-clock:")
+            
+        elif ("windows store" in x or "microsoft store" in x or "store" in x):
+            pyttsx3.speak("Opening store.")
+            os.system("start ms-windows-store:")
+            
+        elif ("mail" in x or "outlook" in x):
+            pyttsx3.speak("Opening outlook mail.")
+            os.system("start outlookmail:")
+            
+        elif ("settings" in x):
+            pyttsx3.speak("Opening settings.")
+            os.system("start ms-settings:")
+            
+        elif ("microsoft edge" in x):
+            pyttsx3.speak("Opening microsoft edge.")
+            os.system("start microsoft-edge:")
+            
+        elif ("weather" in x):
+            pyttsx3.speak("Opening weather app")
+            os.system("start bingweather:")
+            
+        elif ("calender" in x):
+            pyttsx3.speak("Opening calender")
+            os.system("start outlookcal:")
+            
+        elif ("photos" in x or "gallery" in x or "images" in x):
+            pyttsx3.speak("Opening gallery")
+            os.system("start ms-photos:")
+            
+        elif (("camera" in x) or ("webcamera" in x) or ("webcam" in x)):
+            pyttsx3.speak("Opening camera")
+            os.system("start microsoft.windows.camera:")
+            
+        elif(("paint 3d" in x) or ("paint" in x) or ("3d paint" in x)):
+            pyttsx3.speak("Opening paint")
+            os.system("start ms-paint:")
+            
+        elif(("adobe" in x) or ("acrobat" in x) or ("pdf viewer" in x) or ("pdf reader" in x)):
+            pyttsx3.speak("Opening acrobat reader")
+            os.system("AcroRd32")
+        else:
+            print("Sorry, I am unable to process your request.")
+            pyttsx3.speak("Sorry, I am unable to process your request.")
+        
+    else:
+        print("Sorry, I am unable to process your request.")
+        pyttsx3.speak("Sorry, I am unable to process your request.")
